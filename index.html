@@ -321,6 +321,24 @@ button{
   font-size: 48px;
 }
 
+/* 섹션1: 이름 아래 동그란 사진 */
+.person{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.avatar{
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 2px solid rgba(255,255,255,0.95);
+  box-shadow: 0 10px 18px rgba(0,0,0,0.12);
+  background: rgba(255,255,255,0.6);
+}
+
   </style>
   
 </head>
@@ -332,14 +350,20 @@ button{
       <div class="sub">버튼을 눌러 결과를 확인해요</div>
     </header>
 
-    <!-- 섹션1 -->
-    <section class="card">
-      <div class="names">
-        <div class="pill" id="momName">엄마: 수정</div>
-        <div class="pill" id="dadName">아빠: 준혁</div>
-      </div>
-    </section>
+<!-- 섹션1 -->
+<section class="card">
+  <div class="names">
+    <div class="person">
+      <div class="pill" id="momName">엄마: 수정</div>
+      <img class="avatar" id="momAvatar" src="./mom.jpg" alt="엄마 사진" />
+    </div>
 
+    <div class="person">
+      <div class="pill" id="dadName">아빠: 준혁</div>
+      <img class="avatar" id="dadAvatar" src="./dad.jpg" alt="아빠 사진" />
+    </div>
+  </div>
+</section>
 <!-- 섹션2 -->
 <section class="card">
   <div class="baby-grid">
