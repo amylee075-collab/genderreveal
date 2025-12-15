@@ -183,15 +183,20 @@
 
     /* Due box */
     .due{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      padding:16px;
-      background: var(--card2);
-      border-radius:12px;
-      margin-bottom:24px;
-    }
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:16px;
+  background: var(--card2);
+  border-radius:12px;
+  margin-bottom:24px;
+}
+
+/* ✅ p 기본 마진 때문에 깨지는 거 방지 */
+.due p{ margin:0; }
+.due .k{ margin:0 0 2px 0; }
+
     .cal{
       font-size:18px;
       color: var(--accent);
@@ -538,7 +543,6 @@
 
     function openModal(){
       const isGirl = CONFIG.gender === "GIRL";
-      $("resultImg").src = isGirl ? CONFIG.girlImg : CONFIG.boyImg;
       $("genderText").textContent = isGirl ? "여자아이에요!🎉" : "남자아이에요!🎉";
       $("noteText").innerHTML = `${formatDue(CONFIG.dueDate)}에<br/>우리 건강하게 만나요 ❤️`;
       $("overlay").classList.add("show");
