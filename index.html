@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>흰둥이의 성별은 무엇일까요💝</title>
 
+  <!-- ✅ Pretendard Webfont -->
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@latest/dist/web/static/pretendard.css" />
+
   <!-- ✅ Open Graph (카톡/노션 등) -->
   <meta property="og:title" content="흰둥이 성별 공개 💫" />
   <meta property="og:description" content="흰둥이의 성별을 공개합니다!" />
@@ -30,7 +34,7 @@
     *{ box-sizing:border-box; }
     body{
       margin:0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif;
+      font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif;
       color: var(--text);
       background: linear-gradient(135deg, var(--bg) 0%, var(--bg2) 100%);
       overflow-x:hidden;
@@ -112,10 +116,11 @@
       font-size:14px;
       color: var(--muted);
       margin:0 0 4px;
+      font-weight:600;
     }
     .name{
       font-size:16px;
-      font-weight:600;
+      font-weight:700;
       margin:0;
     }
 
@@ -163,6 +168,7 @@
       z-index: 2;
       backdrop-filter: blur(6px);
       border: 1px solid rgba(255,255,255,0.25);
+      white-space: nowrap;
     }
 
     /* Due box (연노랑 박스) */
@@ -178,7 +184,6 @@
       box-shadow: 0 6px 18px rgba(0,0,0,0.06);
       margin-bottom: 24px;
     }
-
     .due p{ margin:0; }
 
     .cal{
@@ -220,7 +225,7 @@
       border:none;
       border-radius:12px;
       font-size:18px;
-      font-weight:700;
+      font-weight:800;
       cursor:pointer;
       color:#fff;
       box-shadow: 0 6px 20px rgba(0,0,0,0.15);
@@ -234,6 +239,7 @@
       color: var(--muted);
       margin:0;
       text-align:center;
+      font-weight:600;
     }
 
     /* Wait state */
@@ -253,7 +259,7 @@
     }
     .wait-text{
       font-size:20px;
-      font-weight:600;
+      font-weight:700;
       color: var(--accent);
       margin:0;
     }
@@ -289,12 +295,12 @@
 
     .p1{
       font-size:24px;
-      font-weight:600;
+      font-weight:700;
       margin:0 0 8px;
     }
     .p2{
       font-size:36px;
-      font-weight:700;
+      font-weight:900;
       margin:0 0 24px;
       color: var(--accent);
     }
@@ -305,6 +311,7 @@
       margin-bottom:24px;
       line-height:1.6;
       font-size:16px;
+      font-weight:600;
     }
     .close{
       padding:14px 32px;
@@ -313,7 +320,7 @@
       background: var(--accent);
       color:#fff;
       font-size:16px;
-      font-weight:600;
+      font-weight:800;
       cursor:pointer;
       box-shadow: 0 4px 16px rgba(0,0,0,0.12);
     }
@@ -358,7 +365,7 @@
       <div class="header">
         <div class="sparkle">✨</div>
         <h1 id="titleText">흰둥이의 성별은?</h1>
-        <p class="sub">우리 가족에게 곧 찾아올 아기 천사</p>
+        <p class="sub"> 두근두근 ♥️ 아래의 성별 공개 버튼을 눌러주세요🎊 </p>
       </div>
 
       <div class="card" id="mainCard">
@@ -400,13 +407,13 @@
           <div class="party">🎉</div>
           <p class="wait-text">잠시만 기다려주세요...</p>
         </div>
-      </div><!-- ✅ card 닫힘 -->
+      </div>
 
       <p class="footer" id="footerText">Made by 수정💝</p>
-    </div><!-- ✅ wrap 닫힘 -->
-  </div><!-- ✅ page 닫힘 -->
+    </div>
+  </div>
 
-  <!-- Modal (✅ card 밖으로 이동) -->
+  <!-- Modal -->
   <div class="overlay" id="overlay">
     <div class="modal" role="dialog" aria-modal="true">
       <p class="p1"><span id="babyNick">흰둥이</span>는</p>
@@ -452,7 +459,6 @@
       return Math.ceil((due.getTime() - now.getTime()) / (1000*60*60*24));
     }
 
-    // 초기 렌더
     document.documentElement.style.setProperty("--accent", accentByGender(CONFIG.gender));
     $("momName").textContent = CONFIG.momName;
     $("dadName").textContent = CONFIG.dadName;
