@@ -135,14 +135,13 @@
       0%,100%{ transform: scale(1); }
       50%{ transform: scale(1.18); }
     }
-
 /* Ultrasound */
 .ultra-wrap{
   border-radius:12px;
   overflow:hidden;
   margin-bottom:24px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  position: relative; /* ✅ 오버레이 기준 */
+  position: relative;
 }
 
 .ultra{
@@ -154,33 +153,20 @@
 .ultra-label{
   position: absolute;
   left: 50%;
-  bottom: 14px;                 /* ✅ 이미지 하단에서 여백 */
-  transform: translateX(-50%);  /* ✅ 중앙 정렬 */
-
-  padding: 10px 16px;
+  bottom: 14px;
+  transform: translateX(-50%);
+  padding: 8px 14px;
   border-radius: 999px;
   background: rgba(0,0,0,0.45);
   color: #fff;
   font-weight: 900;
   font-size: 16px;
-  letter-spacing: -0.02em;
   z-index: 2;
   backdrop-filter: blur(6px);
   border: 1px solid rgba(255,255,255,0.25);
 }
-    
-.ultra-wrap::after{
-  content:"";
-  position:absolute;
-  left:0; right:0; bottom:0;
-  height: 42%;
-  background: linear-gradient(to top, rgba(0,0,0,0.40), transparent);
-  pointer-events:none;
-}
 
-}
-
-/* Due box */
+/* Due box (연노랑 박스) */
 .due{
   display:flex;
   align-items:center;
@@ -188,8 +174,7 @@
   gap: 12px;
   padding: 16px 18px;
 
-  /* ✅ 연노랑 박스 */
-  background: rgba(255, 239, 179, 0.85);
+  background: rgba(255, 239, 179, 0.85);  /* ✅ 연노랑 */
   border: 1px solid rgba(0,0,0,0.06);
   border-radius: 14px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.06);
@@ -197,7 +182,7 @@
   margin-bottom: 24px;
 }
 
-.due p{ margin:0; } /* ✅ p 기본 마진 제거 */
+.due p{ margin:0; }
 
 .cal{
   width: 28px;
@@ -210,9 +195,7 @@
   font-size: 16px;
 }
 
-.due-txt{
-  text-align: center;
-}
+.due-txt{ text-align:center; }
 
 .due .k{
   font-size: 13px;
@@ -440,12 +423,12 @@
           </div>
         </div>
   
-        <div class="ultra-wrap">
-            <div class="ultra-label" id="ultraLabel">흰둥이</div>
-            <img id="ultraImg" class="ultra" src="./ultrasound.jpg" alt="초음파 사진" />
-        </div>
+<div class="ultra-wrap">
+  <div class="ultra-label" id="ultraLabel">흰둥이</div>
+  <img id="ultraImg" class="ultra" src="./ultrasound.jpg" alt="초음파 사진" />
+</div>
 
-        <div class="due">
+<div class="due">
   <div class="cal">🗓️</div>
   <div class="due-txt">
     <p class="k">출산 예정일</p>
@@ -456,19 +439,13 @@
   </div>
 </div>
 
-        </div>
+<button class="btn" id="revealBtn">✨ 성별 공개 ✨</button>
 
-        <button class="btn" id="revealBtn">✨ 성별 공개 ✨</button>
+<div class="wait" id="waitBox" style="display:none;">
+  <div class="party">🎉</div>
+  <p class="wait-text">잠시만 기다려주세요...</p>
+</div>
 
-        <div class="wait" id="waitBox" style="display:none;">
-          <div class="party">🎉</div>
-          <p class="wait-text">잠시만 기다려주세요...</p>
-        </div>
-      </div>
-
-      <p class="footer" id="footerText">Made by 수정💝</p>
-    </div>
-  </div>
 
   <!-- Modal -->
   <div class="overlay" id="overlay">
