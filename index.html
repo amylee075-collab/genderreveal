@@ -364,20 +364,21 @@
     }
 
     /* Confetti */
-    .confetti-piece{
-      position: fixed;
-      top: -12px;
-      width: 12px;
-      height: 12px;
-      border-radius: 2px;
-      opacity: 0.9;
-      pointer-events: none;
-      z-index: 9999;
-      background: var(--c);
-      animation: fall var(--dur) linear forwards;
-      transform: translateX(var(--x)) rotate(var(--r));
-      left: var(--left);
-    }
+  .confetti-piece{
+  position: fixed;
+  top: -12px;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  opacity: 0.9;
+  pointer-events: none;
+  z-index: 20000; /* ✅ 모달(10000)보다 위로 */
+  background: var(--c);
+  animation: fall var(--dur) linear forwards;
+  transform: translateX(var(--x)) rotate(var(--r));
+  left: var(--left);
+}
+
     @keyframes fall{
       to{
         transform: translateX(var(--x)) translateY(110vh) rotate(calc(var(--r) + 360deg));
