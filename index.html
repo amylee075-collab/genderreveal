@@ -3,16 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title> 흰둥이의 성별은 무엇일까요💝 </title>
+  <title>흰둥이의 성별은 무엇일까요💝</title>
 
   <!-- ✅ Open Graph (카톡/노션 등) -->
-<meta property="og:title" content="흰둥이 성별 공개 💫 " />
-<meta property="og:description" content="흰둥이의 성별을 공개합니다!" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://amylee075-collab.github.io/genderreveal/" />
-<meta property="og:image" content="https://amylee075-collab.github.io/genderreveal/share.jpg" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
+  <meta property="og:title" content="흰둥이 성별 공개 💫" />
+  <meta property="og:description" content="흰둥이의 성별을 공개합니다!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://amylee075-collab.github.io/genderreveal/" />
+  <meta property="og:image" content="https://amylee075-collab.github.io/genderreveal/share.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
   <style>
     :root{
       --bg: #FFF7D6;
@@ -23,7 +24,7 @@
       --muted: rgba(25,26,28,0.62);
       --radius: 18px;
       --shadow: 0 4px 20px rgba(0,0,0,0.08);
-      --accent: rgba(255,105,200,1); /* 기본(딸) - JS에서 성별에 맞게 변경 */
+      --accent: rgba(255,105,200,1);
     }
 
     *{ box-sizing:border-box; }
@@ -49,9 +50,7 @@
       max-width:480px;
     }
 
-    .header{
-      margin-bottom:32px;
-    }
+    .header{ margin-bottom:32px; }
     .sparkle{
       width:40px; height:40px;
       margin:0 auto 16px;
@@ -93,7 +92,6 @@
       min-width: 160px;
     }
 
-    /* ✅ 아바타: 120px 고정 + !important */
     .avatar{
       width:120px !important;
       height:120px !important;
@@ -135,87 +133,85 @@
       0%,100%{ transform: scale(1); }
       50%{ transform: scale(1.18); }
     }
-/* Ultrasound */
-.ultra-wrap{
-  border-radius:12px;
-  overflow:hidden;
-  margin-bottom:24px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  position: relative;
-}
 
-.ultra{
-  width:100%;
-  display:block;
-  object-fit:cover;
-}
+    /* Ultrasound */
+    .ultra-wrap{
+      border-radius:12px;
+      overflow:hidden;
+      margin-bottom:24px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      position: relative;
+    }
 
-.ultra-label{
-  position: absolute;
-  left: 50%;
-  bottom: 14px;
-  transform: translateX(-50%);
-  padding: 8px 14px;
-  border-radius: 999px;
-  background: rgba(0,0,0,0.45);
-  color: #fff;
-  font-weight: 900;
-  font-size: 16px;
-  z-index: 2;
-  backdrop-filter: blur(6px);
-  border: 1px solid rgba(255,255,255,0.25);
-}
+    .ultra{
+      width:100%;
+      display:block;
+      object-fit:cover;
+    }
 
-/* Due box (연노랑 박스) */
-.due{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap: 12px;
-  padding: 16px 18px;
+    .ultra-label{
+      position: absolute;
+      left: 50%;
+      bottom: 14px;
+      transform: translateX(-50%);
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(0,0,0,0.45);
+      color: #fff;
+      font-weight: 900;
+      font-size: 16px;
+      z-index: 2;
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255,255,255,0.25);
+    }
 
-  background: rgba(255, 239, 179, 0.85);  /* ✅ 연노랑 */
-  border: 1px solid rgba(0,0,0,0.06);
-  border-radius: 14px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    /* Due box (연노랑 박스) */
+    .due{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap: 12px;
+      padding: 16px 18px;
+      background: rgba(255, 239, 179, 0.85);
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 14px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      margin-bottom: 24px;
+    }
 
-  margin-bottom: 24px;
-}
+    .due p{ margin:0; }
 
-.due p{ margin:0; }
+    .cal{
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.65);
+      border: 1px solid rgba(0,0,0,0.06);
+      display: grid;
+      place-items: center;
+      font-size: 16px;
+    }
 
-.cal{
-  width: 28px;
-  height: 28px;
-  border-radius: 8px;
-  background: rgba(255,255,255,0.65);
-  border: 1px solid rgba(0,0,0,0.06);
-  display: grid;
-  place-items: center;
-  font-size: 16px;
-}
+    .due-txt{ text-align:center; }
 
-.due-txt{ text-align:center; }
+    .due .k{
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 800;
+      margin-bottom: 2px;
+    }
 
-.due .k{
-  font-size: 13px;
-  color: var(--muted);
-  font-weight: 800;
-  margin-bottom: 2px;
-}
+    .due .v{
+      font-size: 16px;
+      font-weight: 900;
+    }
 
-.due .v{
-  font-size: 16px;
-  font-weight: 900;
-}
-
-.dday{
-  margin-left: 6px;
-  color: var(--muted);
-  font-size: 14px;
-  font-weight: 800;
-}
-
+    .dday{
+      margin-left: 6px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 800;
+    }
 
     /* Buttons */
     .btn{
@@ -237,12 +233,11 @@
       font-size:14px;
       color: var(--muted);
       margin:0;
+      text-align:center;
     }
 
     /* Wait state */
-    .wait{
-      padding:24px 0 6px;
-    }
+    .wait{ padding:24px 0 6px; }
     .party{
       font-size:48px;
       margin-bottom:16px;
@@ -292,29 +287,6 @@
       to{ transform: translateY(0) scale(1); opacity:1; }
     }
 
-    .badge{
-      width:120px;
-      height:120px;
-      margin:0 auto 24px;
-      border-radius:50%;
-      background: linear-gradient(135deg, var(--accent), rgba(255,255,255,1));
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
-    }
-    .badge img{
-      width:80px;
-      height:80px;
-      object-fit:contain;
-      display:block;
-    }
-    .h2{
-      font-size:32px;
-      font-weight:700;
-      margin:0 0 12px;
-      color: var(--accent);
-    }
     .p1{
       font-size:24px;
       font-weight:600;
@@ -347,21 +319,20 @@
     }
 
     /* Confetti */
-  .confetti-piece{
-  position: fixed;
-  top: -12px;
-  width: 12px;
-  height: 12px;
-  border-radius: 2px;
-  opacity: 0.9;
-  pointer-events: none;
-  z-index: 20000; /* ✅ 모달(10000)보다 위로 */
-  background: var(--c);
-  animation: fall var(--dur) linear forwards;
-  transform: translateX(var(--x)) rotate(var(--r));
-  left: var(--left);
-}
-
+    .confetti-piece{
+      position: fixed;
+      top: -12px;
+      width: 12px;
+      height: 12px;
+      border-radius: 2px;
+      opacity: 0.9;
+      pointer-events: none;
+      z-index: 20000;
+      background: var(--c);
+      animation: fall var(--dur) linear forwards;
+      transform: translateX(var(--x)) rotate(var(--r));
+      left: var(--left);
+    }
     @keyframes fall{
       to{
         transform: translateX(var(--x)) translateY(110vh) rotate(calc(var(--r) + 360deg));
@@ -373,27 +344,11 @@
     }
 
     @media (max-width: 420px){
-  .parents{
-    flex-wrap: nowrap;   /* ✅ 줄바꿈 금지 */
-    gap: 12px;           /* ✅ 간격 줄이기 */
-  }
-  .person{
-    min-width: 0;        /* ✅ 기존 160px 때문에 줄바꿈 되던 것 방지 */
-    flex: 1;
-  }
-  .avatar{
-    width: 88px !important;  /* ✅ 작은 화면에서 한 줄 유지용 */
-    height: 88px !important;
-    border-width: 3px;
-  }
-  .heart{
-    width: 28px;
-    height: 28px;
-    font-size: 22px;
-  }
-}
-
-    
+      .parents{ flex-wrap: nowrap; gap: 12px; }
+      .person{ min-width: 0; flex: 1; }
+      .avatar{ width: 88px !important; height: 88px !important; border-width: 3px; }
+      .heart{ width: 28px; height: 28px; font-size: 22px; }
+    }
   </style>
 </head>
 
@@ -422,45 +377,47 @@
             <p class="name" id="dadName">준혁</p>
           </div>
         </div>
-  
-<div class="ultra-wrap">
-  <div class="ultra-label" id="ultraLabel">흰둥이</div>
-  <img id="ultraImg" class="ultra" src="./ultrasound.jpg" alt="초음파 사진" />
-</div>
 
-<div class="due">
-  <div class="cal">🗓️</div>
-  <div class="due-txt">
-    <p class="k">출산 예정일</p>
-    <p class="v">
-      <span id="dueText"></span>
-      <span class="dday" id="ddayText"></span>
-    </p>
-  </div>
-</div>
+        <div class="ultra-wrap">
+          <div class="ultra-label" id="ultraLabel">흰둥이</div>
+          <img id="ultraImg" class="ultra" src="./ultrasound.jpg" alt="초음파 사진" />
+        </div>
 
-<button class="btn" id="revealBtn">✨ 성별 공개 ✨</button>
+        <div class="due">
+          <div class="cal">🗓️</div>
+          <div class="due-txt">
+            <p class="k">출산 예정일</p>
+            <p class="v">
+              <span id="dueText"></span>
+              <span class="dday" id="ddayText"></span>
+            </p>
+          </div>
+        </div>
 
-<div class="wait" id="waitBox" style="display:none;">
-  <div class="party">🎉</div>
-  <p class="wait-text">잠시만 기다려주세요...</p>
-</div>
+        <button class="btn" id="revealBtn">✨ 성별 공개 ✨</button>
 
+        <div class="wait" id="waitBox" style="display:none;">
+          <div class="party">🎉</div>
+          <p class="wait-text">잠시만 기다려주세요...</p>
+        </div>
+      </div><!-- ✅ card 닫힘 -->
 
-  <!-- Modal -->
+      <p class="footer" id="footerText">Made by 수정💝</p>
+    </div><!-- ✅ wrap 닫힘 -->
+  </div><!-- ✅ page 닫힘 -->
+
+  <!-- Modal (✅ card 밖으로 이동) -->
   <div class="overlay" id="overlay">
     <div class="modal" role="dialog" aria-modal="true">
       <p class="p1"><span id="babyNick">흰둥이</span>는</p>
       <p class="p2" id="genderText">여자아이에요!🎉</p>
 
       <div class="note" id="noteText"></div>
-
       <button class="close" id="closeBtn">닫기</button>
     </div>
   </div>
 
   <script>
-    // ✅ 여기만 바꾸면 됨
     const CONFIG = {
       momName: "수정",
       dadName: "준혁",
@@ -469,12 +426,9 @@
       gender: "GIRL", // "GIRL" | "BOY"
       revealDelayMs: 700,
 
-      // 상대경로 권장 (레포명 바뀌어도 안전)
       ultrasoundSrc: "./ultrasound.jpg",
       momAvatarSrc: "./mom.jpg",
       dadAvatarSrc: "./dad.jpg",
-      girlImg: "./girl.png",
-      boyImg: "./boy.png",
     };
 
     function accentByGender(g){
@@ -550,20 +504,14 @@
       $("revealBtn").style.display = "block";
     }
 
-    // 이벤트
     $("revealBtn").addEventListener("click", () => {
       $("revealBtn").style.display = "none";
       $("waitBox").style.display = "block";
-
       makeConfetti();
-
-      setTimeout(() => {
-        openModal();
-      }, CONFIG.revealDelayMs);
+      setTimeout(openModal, CONFIG.revealDelayMs);
     });
 
     $("closeBtn").addEventListener("click", closeModal);
-
     $("overlay").addEventListener("click", (e) => {
       if(e.target === $("overlay")) closeModal();
     });
