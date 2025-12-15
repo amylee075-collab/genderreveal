@@ -136,34 +136,37 @@
       50%{ transform: scale(1.18); }
     }
 
-    /* Ultrasound */
-    .ultra-wrap{
-      border-radius:12px;
-      overflow:hidden;
-      margin-bottom:24px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-     position: relative; /* ✅ 오버레이 기준 */
-        }
-    .ultra{
-      width:100%;
-      display:block;
-      object-fit:cover;
-      
-   .ultra-label{
-    position: absolute;
-    left: 12px;
-    top: 12px;
-    padding: 8px 12px;
-    border-radius: 999px;
-    background: rgba(0,0,0,0.45);
-    color: #fff;
-    font-weight: 800;
-    font-size: 16px;
-    letter-spacing: -0.02em;
-    z-index: 2;
-    backdrop-filter: blur(6px);
+/* Ultrasound */
+.ultra-wrap{
+  border-radius:12px;
+  overflow:hidden;
+  margin-bottom:24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  position: relative; /* ✅ 오버레이 기준 */
 }
-    }
+
+.ultra{
+  width:100%;
+  display:block;
+  object-fit:cover;
+}
+
+.ultra-label{
+  position: absolute;
+  left: 16px;   /* ✅ 사진 가장자리와 여백 */
+  top: 16px;    /* ✅ 사진 가장자리와 여백 */
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(0,0,0,0.45);
+  color: #fff;
+  font-weight: 900; /* ✅ 더 굵게(bold) */
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  z-index: 2;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.25);
+}
+
 
     /* Due box */
     .due{
@@ -350,6 +353,29 @@
     @media (prefers-reduced-motion: reduce){
       .heart, .party, .modal, .confetti-piece { animation: none !important; }
     }
+
+    @media (max-width: 420px){
+  .parents{
+    flex-wrap: nowrap;   /* ✅ 줄바꿈 금지 */
+    gap: 12px;           /* ✅ 간격 줄이기 */
+  }
+  .person{
+    min-width: 0;        /* ✅ 기존 160px 때문에 줄바꿈 되던 것 방지 */
+    flex: 1;
+  }
+  .avatar{
+    width: 88px !important;  /* ✅ 작은 화면에서 한 줄 유지용 */
+    height: 88px !important;
+    border-width: 3px;
+  }
+  .heart{
+    width: 28px;
+    height: 28px;
+    font-size: 22px;
+  }
+}
+
+    
   </style>
 </head>
 
